@@ -3,19 +3,18 @@ language: php
 php: 
   - 5.5
   
-env:
-  global:
-    - FRUIT="APPLE"
-    - SWEET="$(echo $FRUIT)"
-    - PV="$(phpenv version-name)"
-    - AW=$(php)
+# env:
+#   global:
+#     - FRUIT="APPLE"
+#     - SWEET="$(echo $FRUIT)"
+#     - PV="$(phpenv version-name)"
+#     - AW=$(php)
 
   
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/$MY_PHP_VERSION/lib/php/extensions/no-debug-non-zts-20131226/"
-
+   - $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/no-debug-non-zts-20131226/"
 
  ci:
   - echo "$SWEET"
