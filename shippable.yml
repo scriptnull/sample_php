@@ -7,7 +7,8 @@ env:
   global:
     - FRUIT="APPLE"
     - SWEET="$(echo $FRUIT)"
-    - MY_PHP_VERSION="$(phpenv version-name)"
+    - PV="$(phpenv version-name)"
+    - AW=$(php)
 
   
 build:
@@ -18,7 +19,8 @@ build:
 
  ci:
   - echo "$SWEET"
-  - echo "$MY_PHP_VERSION"
+  - echo "$PV"
+  - echo "$AW"
   - export YO=$(phpenv version-name)
   - echo "$YO"
   - echo $(phpenv version-name) 
