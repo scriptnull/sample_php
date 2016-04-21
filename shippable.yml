@@ -11,7 +11,7 @@ env:
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/no-debug-non-zts-20131226
+   - $HOME/.phpenv/versions/\"$(phpenv version-name)\"/lib/php/extensions/no-debug-non-zts-20131226
 
 
  ci:
