@@ -5,13 +5,13 @@ php:
 
 env:
   global:
-    - VER=`phpenv version-name`
+    - VER="$(phpenv version-name)"
     - PA=$(ls --version)
   
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/$SHIPPABLE_JOB_ID/lib/php/extensions/no-debug-non-zts-20131226
+   - $HOME/.phpenv/versions/$VER/lib/php/extensions/no-debug-non-zts-20131226
 
 
  ci:
