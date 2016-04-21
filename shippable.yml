@@ -3,7 +3,8 @@ language: php
 php: 
   - 5.5
   
-env: MY_PHP_VERSION=$(phpenv version-name)
+env:
+ - MY_PHP_VERSION=$(phpenv version-name)
 
   
 build:
@@ -13,6 +14,7 @@ build:
 
 
  ci:
+  - echo $MY_PHP_VERSION
   - echo $(phpenv version-name) 
   - pickle install intl
   - mkdir -p shippable/codecoverage
