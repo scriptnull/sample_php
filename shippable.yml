@@ -4,6 +4,8 @@ php:
   - 5.5
   
 env:
+ - FRUIT="APPLE"
+ - SWEET=$(echo "$FRUIT")
  - MY_PHP_VERSION=$(phpenv version-name)
 
   
@@ -14,6 +16,7 @@ build:
 
 
  ci:
+  - echo "$SWEET"
   - echo $MY_PHP_VERSION
   - export YO=$(phpenv version-name)
   - echo "$YO"
