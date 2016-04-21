@@ -10,11 +10,13 @@ env:
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/"$(phpenv version-name)"/lib/php/extensions/no-debug-non-zts-20131226/"
+   - $HOME/.phpenv/versions/$HOME/lib/php/extensions/no-debug-non-zts-20131226/"
 
 
  ci:
   - echo $MY_PHP_VERSION
+  - export YO=$(phpenv version-name)
+  - echo "$YO"
   - echo $(phpenv version-name) 
   - pickle install intl
   - mkdir -p shippable/codecoverage
