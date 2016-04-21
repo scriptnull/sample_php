@@ -5,7 +5,7 @@ php:
 
 env:
   global:
-    - VER=$(phpenv version-name)
+    - VER=`phpenv version-name`
     - PA=$(pwd)
   
 build:
