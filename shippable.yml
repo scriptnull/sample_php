@@ -6,17 +6,19 @@ php:
 env:
  - FRUIT="APPLE"
  - SWEET=$(echo "$FRUIT")
- - MY_PHP_VERSION=$(phpenv version-name)
+# - MY_PHP_VERSION=$(phpenv version-name)
 
   
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/$HOME/lib/php/extensions/no-debug-non-zts-20131226/"
+   - $HOME/.phpenv/versions/$MY_PHP_VERSION/lib/php/extensions/no-debug-non-zts-20131226/"
 
 
  ci:
   - echo "$SWEET"
+  - echo $MY_PHP_VERSION
+  - MY_PHP_VERSION=$(phpenv version-name)
   - echo $MY_PHP_VERSION
   - export YO=$(phpenv version-name)
   - echo "$YO"
