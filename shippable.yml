@@ -18,9 +18,7 @@ build:
 
  ci:
   - echo "$SWEET"
-  - echo $MY_PHP_VERSION
-  - MY_PHP_VERSION=$(phpenv version-name)
-  - echo $MY_PHP_VERSION
+  - echo "$MY_PHP_VERSION"
   - export YO=$(phpenv version-name)
   - echo "$YO"
   - echo $(phpenv version-name) 
