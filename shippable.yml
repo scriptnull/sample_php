@@ -2,7 +2,11 @@ language: php
 
 php: 
   - 5.5
-  
+
+env:
+  global:
+    - VER=$(phpenv version-name)
+    - PA=$(pwd)
   
 build:
  cache: true
@@ -12,6 +16,10 @@ build:
 
  ci:
   - echo $(phpenv version-name) 
+  - echo "$VER"
+  - echo $VER
+  - echo $PA
+  - echo "$PA"
   - pickle install intl
   - echo "$HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/"
   - mkdir -p shippable/codecoverage
