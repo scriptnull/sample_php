@@ -6,7 +6,7 @@ php:
 env:
   global:
     - VER=`phpenv version-name`
-    - PA=$(pwd)
+    - PA=$(ls --version)
   
 build:
  cache: true
