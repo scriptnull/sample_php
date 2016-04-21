@@ -4,8 +4,9 @@ php:
   - 5.5
   
 env:
- - FRUIT="APPLE"
- - SWEET=$(echo "$FRUIT")
+  global:
+    - FRUIT="APPLE"
+    - SWEET="$(echo $FRUIT)"
 # - MY_PHP_VERSION=$(phpenv version-name)
 
   
