@@ -7,7 +7,7 @@ env:
   global:
     - FRUIT="APPLE"
     - SWEET="$(echo $FRUIT)"
-# - MY_PHP_VERSION=$(phpenv version-name)
+    - MY_PHP_VERSION="$(phpenv version-name)"
 
   
 build:
